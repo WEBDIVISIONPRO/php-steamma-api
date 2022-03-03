@@ -271,8 +271,8 @@ final class Steamma
         return $this->query('account/inventory/sales/sell', 'POST', array('items' => $items));
     }
 
-    public function deleteSales($appid, $contextid, $items){
-        return $this->query('account/inventory/sales/delete', 'DELETE', array('appid' => $appid, 'contextid' => $contextid, 'items' => $items));
+    public function deleteSales($appid, $contextid, $items, $isSetZero){
+        return $this->query('account/inventory/sales/delete', 'DELETE', array('appid' => $appid, 'contextid' => $contextid, 'items' => $items, 'isSetZero' => $isSetZero));
     }
 
     public function getPurchases($appid, $contextid, $sort, $search, $page){
